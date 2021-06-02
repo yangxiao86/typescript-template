@@ -34,4 +34,3 @@ bundles/*/*.d.ts
 
 # VSCode ignores
 .vscode
-config.json
