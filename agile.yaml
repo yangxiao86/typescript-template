@@ -1,0 +1,35 @@
+build:
+    # 配置node服务环境
+    env:
+        node: '/usr/local/node/node-v10.16.0/bin/node'
+        npm: '/usr/local/node/node-v10.16.0/bin/npm'
+
+    # 静态资源上传CDN
+    static-cdn:
+        module:
+        - dist: './dist'
+          release: 'fe-static/circus'
+
+    # 编译命令
+    command:
+    - 'npm install --unsafe-perm'
+    - 'env'
+    - 'npm run prod'
+
+dev:
+    # 配置node服务环境
+    env:
+        node: '/usr/local/node/node-v12.6.0/bin/node'
+        npm: '/usr/local/node/node-v12.6.0/bin/npm'
+    # 编译命令
+    command:
+    - 'npm install --unsafe-perm'
+    #- 'env' #查看编译环境环境变量
+    - 'npm run stage'
+    # - 'npm run build-example'
+    
+    deploy:
+        deleted: false
+        output: './dist/*'
+        path: '/opt/vipkid/vfe/circus'
+        #command: 'ls -la /tmp/'
