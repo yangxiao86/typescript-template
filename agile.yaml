@@ -31,5 +31,5 @@ dev:
     deploy:
         deleted: false
         output: './dist/*'
-        path: '/opt/vipkid/vfe/circus'
+        path: '/opt/vfe/circus'
         #command: 'ls -la /tmp/'
