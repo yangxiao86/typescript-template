@@ -10,4 +10,3 @@ declare module '*.frag'
 declare module '*.vert'
 declare module '*.glsl'
 declare module 'evaluater-vkm'
-declare let vkTrack: any;
